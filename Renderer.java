@@ -1,14 +1,16 @@
 package Pong;
 import java.awt.Graphics;
+import java.awt.Graphics2D;
 import javax.swing.JPanel;
 
-public class Renderer extends JPanel{
-    
-    private static final long serialVersionUID = 1L;
+public class Renderer extends JPanel
+{
 
-    @Override
-    protected void paintComponent(Graphics g){
-        super.paintComponent(g);
-        Pong.pong.render(g);
-    }
+	private static final long serialVersionUID = 1L;
+	@Override
+	protected void paintComponent(Graphics g)
+	{
+		super.paintComponent(g);
+		Pong.pong.render((Graphics2D) g);
+	}
 }
